@@ -348,7 +348,7 @@ func (aws AwsUnsealer) Token() (string, error) {
 	}
 
 	resp, err := aws.genericUnsealer.Token(goreq.Request{
-		Uri:    vaultPath("/v1/auth/aws-ec2/login", ""),
+		Uri:    vaultPath("/v1/auth/aws/login", ""),
 		Method: "POST",
 		Body: struct {
 			Role  string `json:"role,omitempty"`
